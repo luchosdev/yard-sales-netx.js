@@ -6,6 +6,6 @@ const NotFound = () => {
 			No encontrado, error 404.
 		</div>
 	);
-}
+};
 
 export default NotFound;

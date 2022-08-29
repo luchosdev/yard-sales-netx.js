@@ -10,21 +10,21 @@ const CreateAccount = () => {
 					<div>
 						<label for="name" className={styles.label}>Name</label>
 						<input type="text" id="name"
-								placeholder="Teff" className={styles.input, styles['input-name']} />
+								placeholder="Teff" className={styles.input ['input-name']} />
 						<label for="email" className={style.label}>Email</label>
 						<input type="text" id="email" placeholder="platzi@example.com"
-								className={styles.input, styles['input-email']} />
+								className={styles.input ['input-email']} />
 						<label for="password" className={styles.label}>Password</label>
 						<input type="password" id="password"
 								placeholder="*********"
-								className={styles.input, styles['input-password']} />
+								className={styles.input ['input-password']} />
 					</div>
 					<input type="submit" value="Create"
-							className={styles['primary-button'], styles['login-button']} />
+							className={styles['primary-button'] ['login-button']} />
 				</form>
 			</div>
 		</div>
 	);
-}
+};
 
 export default CreateAccount;

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import logo from '@logos/logo_yard_sale.svg';
 import email from '@icons/email.svg';
 import styles from '@styles/SendEmail.module.scss';
+import Link from 'next/link';
 
 const SendEmail = () => {
 	return (
@@ -14,14 +15,14 @@ const SendEmail = () => {
 				<div className={styles['email-image']}>
 					<Image src={email} alt="email" />
 				</div>
-				<button className={styles['primary-button'], styles['login-button']}>Login</button>
+				<button className={styles['primary-button'] ['login-button']}>Login</button>
 				<p className={styles.resend}>
-					<span>Didn't receive the email?</span>
-					<a href="/">Resend</a>
+					<span>¿Did not receive the email?</span>
+					<Link href="/">Resend</Link>
 				</p>
 			</div>
 		</div>
 	);
-}
+};
 
 export default SendEmail;

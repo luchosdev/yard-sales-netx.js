@@ -7,6 +7,6 @@ const Home = () => {
 			<ProductList />
 		</>
 	);
-}
+};
 
 export default Home;

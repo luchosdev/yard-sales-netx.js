@@ -12,22 +12,22 @@ const NewPassword = () => {
 				<p className={styles.subtitle}>Enter a new passwrd for yue account</p>
 				<form action="/" className={styles.form}>
 					<label for="password"
-						className={styles.label}>Password</label>
+							className={styles.label}>Password</label>
 					<input type="password" id="password"
 						placeholder="*********"
-						className={styles.input, styles['input-password']} />
+						className={styles.input ['input-password']} />
 					<label for="new-password"
 						className={styles.label}>Password</label>
 					<input type="password"
 						id="new-password"
 						placeholder="*********"
-						className={styles.input, styles['input-password']} />
+						className={styles.input ['input-password']} />
 					<input type="submit" value="Confirm"
-						className={styles['primary-button'], styles['login-button']} />
+						className={styles['primary-button'] ['login-button']} />
 				</form>
 			</div>
 		</div>
 	);
-}
+};
 
 export default NewPassword;

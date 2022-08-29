@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import logo from '@logos/logo_yard_sale.svg'
+import logo from '@logos/logo_yard_sale.svg';
 import styles from '@styles/PasswordRecovery.module.scss';
 
 const PasswordRecovery = () => {
@@ -14,13 +14,13 @@ const PasswordRecovery = () => {
 					<label htmlFor="email"
 						className={styles.label}>Email address</label>
 					<input type="text" id="email"
-						className={styles.input, styles['input-email']} />
+						className={styles.input ['input-email']} />
 					<input type="submit" value="Confirm"
-						className={styles['primary-button'], styles['login-button']} />
+						className={styles['primary-button'] ['login-button']} />
 				</form>
 			</div>
 		</div>
 	);
-}
+};
 
 export default PasswordRecovery;

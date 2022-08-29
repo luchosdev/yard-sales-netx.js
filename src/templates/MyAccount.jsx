@@ -16,11 +16,11 @@ const MyAccount = () => {
 						<p className={styles.value}>*********</p>
 					</div>
 					<input type="submit" value="Edit"
-						className={styles['secondary-button'], styles['login-button']} />
+						className={styles['secondary-button'] ['login-button']} />
 				</form>
 			</div>
 		</div>
 	);
-}
+};
 
 export default MyAccount;
