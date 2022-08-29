@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import Image from 'next/image';
 import logo from '@logos/logo_yard_sale.svg';
 import styles from '@styles/Login.module.scss';
+import Link from 'next/link';
 
 const Login = () => {
 	const form = useRef(null);
@@ -12,9 +13,9 @@ const Login = () => {
 		const data = {
 			usename: formData.get('email'),
 			password: formData.get('password')
-		}
+		};
 		console.log(data);
-	}
+	};
 
 	return (
 		<div className={styles.Login}>
@@ -35,7 +36,7 @@ const Login = () => {
 						className={styles['primary-button'], styles['login-button']}>
 						Log in
 					</button>
-					<a href="/">Forgot my password</a>
+					<Link href="/">Forgot my password</Link>
 				</form>
 				<button
 					className={styles['secondary-button'], styles['signup-button']}
@@ -45,6 +46,6 @@ const Login = () => {
 			</div>
 		</div >
 	);
-}
+};
 
 export default Login;

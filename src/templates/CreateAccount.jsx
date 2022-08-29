@@ -8,19 +8,19 @@ const CreateAccount = () => {
 				<h1 className={styles.title}>My account</h1>
 				<form action="/" className={styles.form}>
 					<div>
-						<label for="name" className={styles.label}>Name</label>
+						<label htmlFor="name" className={styles.label}>Name</label>
 						<input type="text" id="name"
-								placeholder="Teff" className={styles.input ['input-name']} />
-						<label for="email" className={style.label}>Email</label>
+								placeholder="Teff" className={styles.input, styles['input-name']} />
+						<label htmlFor="email" className={styles.label}>Email</label>
 						<input type="text" id="email" placeholder="platzi@example.com"
-								className={styles.input ['input-email']} />
-						<label for="password" className={styles.label}>Password</label>
+								className={styles.input, styles['input-email']} />
+						<label htmlFor="password" className={styles.label}>Password</label>
 						<input type="password" id="password"
 								placeholder="*********"
-								className={styles.input ['input-password']} />
+								className={styles.input, styles['input-password']} />
 					</div>
 					<input type="submit" value="Create"
-							className={styles['primary-button'] ['login-button']} />
+							className={styles['primary-button'], styles['login-button']} />
 				</form>
 			</div>
 		</div>

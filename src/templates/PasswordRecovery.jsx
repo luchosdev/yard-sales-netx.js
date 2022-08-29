@@ -14,9 +14,9 @@ const PasswordRecovery = () => {
 					<label htmlFor="email"
 						className={styles.label}>Email address</label>
 					<input type="text" id="email"
-						className={styles.input ['input-email']} />
+						className={styles.input, styles['input-email']} />
 					<input type="submit" value="Confirm"
-						className={styles['primary-button'] ['login-button']} />
+						className={styles['primary-button'], styles['login-button']} />
 				</form>
 			</div>
 		</div>

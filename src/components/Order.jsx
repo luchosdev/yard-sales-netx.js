@@ -13,6 +13,6 @@ const Order = () => {
 			<Image src="./icons/flechita.svg" alt="arrow" />
 		</div>
 	);
-}
+};
 
 export default Order;
