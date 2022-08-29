@@ -17,13 +17,15 @@ const OrderItem = ({ product }) => {
 				<Image loader={() => product?.images[0]}
 						src={product?.images[0]}
 						alt={product?.title}
-						width="100%"
-						height="100%"
+						width={50}
+						height={50}
 						layout="responsive"/>
 			</figure>
 			<p>{product?.title}</p>
 			<p>${product?.price}</p>
-			<Image className={styles.pointer, styles['more-clickable-area']} src={close} alt="close" onClick={() => handleRemove(product)} />
+			<Image className={styles.pointer, styles['more-clickable-area']}
+					src={close} alt="close"
+					onClick={() => handleRemove(product)} />
 		</div>
 	);
 }
