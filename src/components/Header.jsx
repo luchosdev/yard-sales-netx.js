@@ -54,7 +54,7 @@ const Header = () => {
 							className={styles['navbar-shopping-cart']}
 							onClick={() => toggleOrder()}
 							aria-hidden="true" >
-							<Image className={styles.pointer, ['more-clickable-area']}
+							<Image className={styles.pointer, styles['more-clickable-area']}
 									src={shoppingCart} alt="shopping cart" />
 							{state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
 						</li>

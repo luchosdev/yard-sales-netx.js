@@ -15,7 +15,7 @@
   display: none;
 }
 .nav-logo {
-  width: 100px;
+  width: 150px;
 }
 .navbar-left ul,
 .navbar-right ul {
@@ -28,6 +28,7 @@
 }
 .navbar-left {
   display: flex;
+  margin-left: 100px;
 }
 .navbar-left ul {
   margin-left: 12px;
@@ -80,5 +81,12 @@
   }
   .navbar-email {
     display: none;
+  }
+  .navbar-right li:first-of-type{
+    display: none;
+  }
+  .navbar-left{
+    margin:auto;
+		display:block;
   }
 }
