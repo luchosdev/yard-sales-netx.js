@@ -13,9 +13,11 @@
 }
 .menu {
   display: none;
+  cursor: pointer;
 }
 .nav-logo {
   width: 150px;
+  cursor: pointer;
 }
 .navbar-left ul,
 .navbar-right ul {
@@ -54,9 +56,11 @@
   color: $--very-light-pink;
   font-size: $--sm;
   margin-right: 12px;
+  cursor: pointer;
 }
 .navbar-shopping-cart {
   position: relative;
+  cursor: pointer;
 }
 .navbar-shopping-cart div {
   width: 16px;

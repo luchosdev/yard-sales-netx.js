@@ -30,10 +30,10 @@ const ProductItem = ({ product }) => {
 						onClick={() => handleClick(product)} 
 						aria-hidden="true" >
 					{  state.cart.includes(product) ?
-					<Image className={styles.disabled, styles['add-to-cart-btn']}
+					<Image className={styles['add-to-cart-btn']}
 							src={addedToCartImage}
 							alt="added to cart" />  :
-					<Image className={styles.pointer, styles['add-to-cart-btn']}
+					<Image className={styles['add-to-cart-btn']}
 							src={addToCartImage} alt="add to cart" /> }
 				</figure>
 			</div>

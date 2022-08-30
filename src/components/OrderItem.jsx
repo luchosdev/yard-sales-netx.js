@@ -23,7 +23,7 @@ const OrderItem = ({ product }) => {
 			</figure>
 			<p>{product?.title}</p>
 			<p>${product?.price}</p>
-			<Image className={styles.pointer, styles['more-clickable-area']}
+			<Image className={styles['more-clickable-area'], styles['remove-item']}
 					src={close} alt="close"
 					onClick={() => handleRemove(product)} />
 		</div>
