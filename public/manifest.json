@@ -4,9 +4,9 @@
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
-    "name": "React Shop",
-    "short_name": "rshop",
-    "description": "React Shop Ecommerse",
+    "name": "Yard Sales",
+    "short_name": "ysales",
+    "description": "Yard Sales Ecommerse",
     "icons": [
         {
             "src": "/icon-192x192.png",
