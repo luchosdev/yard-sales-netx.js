@@ -4,6 +4,7 @@ const initialState = {
   cart: [],
   orderIsOpen: false,
   menuIsOpen: false,
+  HeaderMobileIsOpen: false,
 };
 
 const useInitialState = () => {
@@ -37,12 +38,20 @@ const useInitialState = () => {
     });
   };
 
+  const toggleHeaderMobile = () => {
+    setState({
+      ...state,
+      HeaderMobileIsOpen: !state.HeaderMobileIsOpen,
+    });
+  };
+
   return {
     state,
     addToCart,
     removeFromCart,
     toggleOrder,
     toggleMenu,
+    toggleHeaderMobile,
   };
 };
 

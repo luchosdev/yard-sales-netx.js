@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Menu from '@components/Menu';
 import MyOrder from '@containers/MyOrder';
+import HeaderMobile from '@components/HeaderMobile';
 import menu from '@icons/icon_menu.svg';
 import logo from '@logos/logo_yard_sale.svg';
 import AppContext from '@context/AppContext';
@@ -10,12 +11,17 @@ import shoppingCart from '@icons/icon_shopping_cart.svg';
 import styles from '@styles/Header.module.scss';
 
 const Header = () => {
-	const { state, toggleOrder, toggleMenu } = useContext(AppContext);
+	const { state, toggleOrder, toggleMenu, toggleHeaderMobile } = useContext(AppContext);
 
 	return (
 		<>
 			<nav className={styles.Nav}>
-				<img src={menu.src} alt="menu" className={styles.menu} />
+				<Image src={menu.src} alt="menu" className={styles.menu}
+					onClick={() => toggleHeaderMobile()}
+					aria-hidden="true"
+					height={24}
+					width={24}
+				/>
 				<div className={styles['navbar-left']}>
 					<Link href="/">
 						<Image src={logo} alt="logo" className={styles['nav-logo']} />
@@ -62,6 +68,7 @@ const Header = () => {
 				</div>
 				{state.menuIsOpen && <Menu />}
 			</nav>
+			{state.HeaderMobileIsOpen && <HeaderMobile />}
 			{state.orderIsOpen && <MyOrder />}
 		</>
 	);

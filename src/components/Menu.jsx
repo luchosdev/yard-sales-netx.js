@@ -16,7 +16,7 @@ const Menu = () => {
 					<Link href="/">Sign out</Link>
 				</li>
 			</ul>
-		</div >
+		</div>
 	);
 };
 
