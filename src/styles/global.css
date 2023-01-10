@@ -1,18 +1,17 @@
 body {
-  margin: 0;
-  font-family: "Quicksand", sans-serif;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
 }
 a[href],
-input[type="submit"],
-input[type="image"],
+input[type='submit'],
+input[type='image'],
 label[for],
 select,
 button,
-
 .pointer:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
-.more-clickable-area{
-	padding: 1em;
-	margin: -1em;
+.more-clickable-area {
+    padding: 1em;
+    margin: -1em;
 }

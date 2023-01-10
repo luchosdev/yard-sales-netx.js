@@ -5,23 +5,23 @@ import useInitialState from '@hooks/useInitialState';
 import '@styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
-  const initialState = useInitialState();
-  return (
-    <AppContext.Provider value={initialState}>
-      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-PCMF525D7D" />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
+    const initialState = useInitialState();
+    return (
+        <AppContext.Provider value={initialState}>
+            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-PCMF525D7D" />
+            <Script id="google-analytics" strategy="afterInteractive">
+                {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
           gtag('config', 'G-PCMF525D7D');
         `}
-      </Script>
-      <Header />
-      <Component {...pageProps} />
-    </AppContext.Provider>
-  );
+            </Script>
+            <Header />
+            <Component {...pageProps} />
+        </AppContext.Provider>
+    );
 }
 
 export default MyApp;

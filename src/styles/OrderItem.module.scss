@@ -1,31 +1,31 @@
 @import 'vars';
 
 .OrderItem {
-	display: grid;
-	grid-template-columns: auto 1fr auto 10px;
-	gap: 30px;
-	margin-bottom: 24px;
-	align-items: center;
+    padding-right: 10px;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: center;
 }
 .OrderItem figure {
-	margin: 0;
-	width: 50px;
-	height: 50px;
+    margin: 0;
+    width: 50px;
+    height: 50px;
 }
 .OrderItem figure img {
-	width: 30px;
-	height: 30px;
-	border-radius: 20px;
-	object-fit: cover;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    object-fit: cover;
 }
 .OrderItem p:nth-child(2) {
-	color: $--very-light-pink;
+    color: $--very-light-pink;
 }
 .OrderItem p:nth-child(3) {
-	font-size: $--md;
-	font-weight: bold;
+    font-size: $--md;
+    font-weight: bold;
 }
-.remove-item{
-	cursor: pointer;
-	
+.remove-item {
+    cursor: pointer;
 }

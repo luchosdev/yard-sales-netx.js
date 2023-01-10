@@ -1,97 +1,118 @@
-@import "vars";
+@import 'vars';
 
 .MyOrder {
-  width: 370px;
-  padding: 24px;
-  box-sizing: border-box;
-  position: fixed;
-  right: 0;
-  background-color: white;
-  top: 60px;
-  bottom: 0;
-  border-radius: 6px;
-  border: 1px solid $--very-light-pink;
-  z-index: 1;
+    height: auto;
+    width: 380px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    top: 60px;
+    bottom: 0;
+    border-radius: 6px;
+    border: 1px solid $--very-light-pink;
+    position: fixed;
+    transition: 1s ease;
+    animation: swipeLeft 1s ease forwards;
+    z-index: 1;
+}
+
+@keyframes swipeLeft {
+    100% {
+        transform: translateX(-200px);
+    }
 }
 .title-container {
-  display: flex;
+    display: flex;
 }
-.MyOrder-container {
-  position: sticky;
-  bottom: 0;
-  right: 0;
-}
+
 .title-container img {
-  transform: rotate(180deg);
-  margin-right: 14px;
-  cursor: pointer;
+    transform: rotate(180deg);
+    cursor: pointer;
 }
 .title {
-  font-size: $--lg;
-  font-weight: bold;
-  margin-left: 20px;
-  margin-top:  17px;
+    font-size: $--lg;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 16px;
 }
 
 .my-order-content {
-  height: 100%;
-  max-height: 100%;
-  display: flex;
-  flex-direction: column;
+    overflow-y: scroll;
+    max-height: 400px;
+    padding-right: 10px;
 }
-
-.my-orders {
-  display: block;
-  width: 340px;
-  max-height: 300px;
-  overflow: scroll;
-  scroll-behavior: smooth;
+/* width */
+.my-order-content::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+.my-order-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+/* Handle */
+.my-order-content::-webkit-scrollbar-thumb {
+    background: #888;
+}
+/* Handle on hover */
+.my-order-content::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 .order {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 16px;
-  align-items: center;
-  background-color: $--text-input-field;
-  margin-bottom: 24px;
-  border-radius: 8px;
-  padding: 0 24px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
+    background-color: $--text-input-field;
+    margin-bottom: 24px;
+    border-radius: 8px;
+    padding: 0 24px;
 }
 .order p:nth-child(1) {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 .order p span:nth-child(1) {
-  font-size: $--md;
-  font-weight: bold;
+    font-size: $--md;
+    font-weight: bold;
 }
 .order p:nth-child(2) {
-  text-align: end;
-  font-weight: bold;
+    text-align: end;
+    font-weight: bold;
 }
 
 .primary-button {
-  background-color: $--hospital-green;
-  border-radius: 8px;
-  border: none;
-  color: $--white;
-  width: 100%;
-  cursor: pointer;
-  font-size: $--md;
-  font-weight: bold;
-  height: 40px;
-  text-align: center;
-  margin: 0px;
-  line-height: 37px;
+    background-color: $--hospital-green;
+    border-radius: 8px;
+    border: none;
+    color: $--white;
+    width: 100%;
+    cursor: pointer;
+    font-size: $--md;
+    font-weight: bold;
+    height: 50px;
+    text-align: center;
+    margin: 0px;
+    line-height: 50px;
 }
-@media (max-width: 640px) {
-  .MyOrder {
-    width: 100%;
-  }
 
-  .my-orders {
-    width: 100%;
-    max-height: 300px;
-  }
+@media (max-width: 640px) {
+    .MyOrder {
+        width: 100%;
+        height: 100vh;
+    }
+    .my-order-content {
+        max-height: 300px;
+    }
+    .my-orders {
+        width: 100%;
+        max-height: 300px;
+    }
+    @keyframes swipeLeft {
+        100% {
+            transform: translateX(0);
+        }
+    }
 }
